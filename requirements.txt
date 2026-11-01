@@ -1,0 +1,7 @@
+# frequency.py and lmcache_key_repro.py need only the standard library.
+# Model probes (CPU is fine; a CPU-only wheel keeps the download small):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch
+transformers>=4.40
+# figures
+matplotlib

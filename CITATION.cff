@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper."
+title: "kvskew: stale KV-cache reuse across model versions"
+authors:
+  - family-names: Rajula
+    given-names: Amit
+    orcid: "https://orcid.org/0009-0006-8025-6867"
+license: MIT
+preferred-citation:
+  type: conference-paper
+  authors:
+    - family-names: Rajula
+      given-names: Amit
+      orcid: "https://orcid.org/0009-0006-8025-6867"
+  title: "Stale Computation: Version-Skewed KV-Cache Reuse in Disaggregated LLM Serving"
+  collection-title: "IEEE International Conference on Parallel, Distributed and Grid Computing (PDGC)"
+  year: 2026

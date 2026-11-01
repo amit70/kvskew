@@ -1,0 +1,33 @@
+{
+  "n_tasks": 120,
+  "rows": [
+    {
+      "n": 120,
+      "ctrl": 0.19166666666666668,
+      "stale": 0.49166666666666664,
+      "break": 2,
+      "fix": 38,
+      "mcnemar_p": 0.9999999999627107,
+      "label": "SmolLM2 base -> instruct (fine-tune)",
+      "cache": "HuggingFaceTB/SmolLM2-135M",
+      "server": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "cos_dist": 0.0030643688933723644,
+      "rel_l2": 0.08575296240223146,
+      "skipped": false
+    },
+    {
+      "n": 120,
+      "ctrl": 0.19166666666666668,
+      "stale": 0.025,
+      "break": 23,
+      "fix": 3,
+      "mcnemar_p": 4.398822784423828e-05,
+      "label": "SmolLM -> SmolLM2 (generation)",
+      "cache": "HuggingFaceTB/SmolLM-135M",
+      "server": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "cos_dist": 0.7872147356264586,
+      "rel_l2": 1.2560264375749253,
+      "skipped": false
+    }
+  ]
+}

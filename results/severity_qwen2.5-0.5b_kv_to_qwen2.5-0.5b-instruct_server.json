@@ -1,0 +1,51 @@
+{
+  "label": "Qwen/Qwen2.5-0.5B KV -> Qwen/Qwen2.5-0.5B-Instruct server",
+  "rows": [
+    {
+      "prompt": "The capital of France is Paris. The capital of I",
+      "exact_prefix_len": 5,
+      "first_div_idx": 5,
+      "token_agreement": 0.2083,
+      "kl_first_step": 0.00478,
+      "control": " Rome. The capital of Germany is Berlin. The capital of the United States is Washington D. C. The capital of",
+      "stale": " Rome. The capital of the United States is Washington D. C. The capital of the United Kingdom is London. The"
+    },
+    {
+      "prompt": "def fibonacci(n):\n    if n <= 1:\n        return ",
+      "exact_prefix_len": 12,
+      "first_div_idx": 12,
+      "token_agreement": 0.5,
+      "kl_first_step": 0.00474,
+      "control": " fibonacci(n-1) + fibonacci(n-2)\n\ndef main():\n    n = int(input(\"Enter the number of",
+      "stale": " fibonacci(n-1) + fibonacci(n-2)\n\ndef fibonacci_recursive(n):\n    if n <= 1:\n       "
+    },
+    {
+      "prompt": "In distributed systems, a cache is said to be st",
+      "exact_prefix_len": 24,
+      "first_div_idx": 24,
+      "token_agreement": 1.0,
+      "kl_first_step": 0.07366,
+      "control": " it contains outdated data. Suppose a cache has a capacity of 1000 entries and is currently storing 5",
+      "stale": " it contains outdated data. Suppose a cache has a capacity of 1000 entries and is currently storing 5"
+    },
+    {
+      "prompt": "Q: What is 17 multiplied by 23?\nA: Let me work t",
+      "exact_prefix_len": 22,
+      "first_div_idx": 22,
+      "token_agreement": 0.9167,
+      "kl_first_step": 0.09409,
+      "control": " 17 multiplied by 23 is the same as 17 x 23. To multiply 1",
+      "stale": " 17 multiplied by 23 is the same as 17 x 23. To multiply these numbers"
+    },
+    {
+      "prompt": "The three primary colors are red, blue, and",
+      "exact_prefix_len": 20,
+      "first_div_idx": 20,
+      "token_agreement": 0.8333,
+      "kl_first_step": 0.06736,
+      "control": " yellow. If you mix these three colors in a certain ratio, you can create a new color. If you mix the",
+      "stale": " yellow. If you mix these three colors in a certain ratio, you can create a new color. What is the ratio"
+    }
+  ],
+  "mean_agreement": 0.6916599999999999
+}

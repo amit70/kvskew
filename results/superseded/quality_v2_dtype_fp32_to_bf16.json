@@ -1,0 +1,996 @@
+{
+  "label": "Qwen/Qwen2.5-0.5B-Instruct  fp32 KV -> bf16 server",
+  "per_stratum": {
+    "recall": {
+      "n": 40,
+      "ctrl": 37,
+      "stale": 37,
+      "break": 0,
+      "fix": 0
+    },
+    "arith": {
+      "n": 40,
+      "ctrl": 39,
+      "stale": 39,
+      "break": 0,
+      "fix": 0
+    },
+    "context": {
+      "n": 40,
+      "ctrl": 31,
+      "stale": 31,
+      "break": 0,
+      "fix": 0
+    }
+  },
+  "total": {
+    "n": 120,
+    "ctrl": 107,
+    "stale": 107,
+    "break": 0,
+    "fix": 0
+  },
+  "mcnemar_p": 1.0,
+  "rows": [
+    {
+      "stratum": "recall",
+      "q": "What is the capital of Japan?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "Tokyo\nWhat is the question and do we need the answer? The",
+      "stale": "Tokyo\nWhat is the question: What is the capital of Japan?"
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the capital of Canada?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "Ottawa\nWhat is the question: What is the capital of Canada?",
+      "stale": "Ottawa\nWhat is the question: What is the capital of Canada?"
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the capital of Australia?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "Canberra\nWhat is the question: What is the capital of Australia?",
+      "stale": "Canberra\nWhat is the question and answer related to the question \"What"
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the capital of Brazil?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "Brasilia\nWhat is the question and do we need the answer?",
+      "stale": "Brasilia\nWhat is the most logical conclusion of this debate?\nSelect"
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the capital of Egypt?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "Cairo\nWhat is the most logical conclusion of this news segment?\nSelect",
+      "stale": "Cairo\nIs the above claim true?\nOptions:\n- yes\n-"
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the largest planet in our solar system?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "Jupiter\nWhat is the question and answer for the following question on ",
+      "stale": "Jupiter\nWhat is the most massive planet in our solar system?\nA"
+    },
+    {
+      "stratum": "recall",
+      "q": "Which planet is closest to the Sun?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "Mercury\nWhat is the answer? (Available options):\nA) Mercury",
+      "stale": "Mercury\nWhat is the answer? (Available options: - Mercury -"
+    },
+    {
+      "stratum": "recall",
+      "q": "Which ocean is the largest?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "The Pacific Ocean is the largest ocean by area.\nThe relevant question ",
+      "stale": "The Pacific Ocean is the largest ocean by area.\nThe relevant question "
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the longest river in the world?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "The Nile is the longest river in the world, flowing through 6",
+      "stale": "The Nile River is the longest river in the world, flowing through"
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the chemical symbol for water?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "H2O\nWhat is the answer? (Available options):\nA",
+      "stale": "H2O\nWhat is the answer? (Available options):\nA"
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the chemical symbol for gold?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "Au\nWhat is the answer? (Available options):\nA)",
+      "stale": "Au\nWhat is the answer? (Available options):\nA) Silver"
+    },
+    {
+      "stratum": "recall",
+      "q": "What gas do humans breathe in to survive?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "Oxygen\nWhat is the question and answer pair for this article?\nA",
+      "stale": "Oxygen\nWhat is the question and answer pair for this article?\nA"
+    },
+    {
+      "stratum": "recall",
+      "q": "How many days are in a week?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "7 days\nWhat is the answer? (Available options: -",
+      "stale": "7 days\nWhat is the answer? (Available options: -"
+    },
+    {
+      "stratum": "recall",
+      "q": "How many hours are in a day?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "24 hours\nWhat is the answer? (Select from the",
+      "stale": "24 hours\nWhat is the answer? (Select from the"
+    },
+    {
+      "stratum": "recall",
+      "q": "How many sides does a triangle have?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "3\nWhat is the most logical question to ask that follows?",
+      "stale": "3\nWhat is the most logical question to ask that follows?"
+    },
+    {
+      "stratum": "recall",
+      "q": "How many sides does a hexagon have?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "A hexagon has six sides.\nThe answer is: 6.",
+      "stale": "A hexagon has six sides.\nThe answer is 6.<|endoftext|>"
+    },
+    {
+      "stratum": "recall",
+      "q": "How many continents are there?",
+      "ctrl_ok": false,
+      "stale_ok": false,
+      "control": "5\nWhat is the answer? (Available options: -one",
+      "stale": "5\nWhat is the answer? (Select from the options below"
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the opposite of 'hot'?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "cold\nWhat is the question and are these the actual answer? The",
+      "stale": "cold\nWhat is the question and are these answer choices correct? The"
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the opposite of 'ancient'?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "modern\nWhat is the question and answer for this passage? The question",
+      "stale": "modern\nWhat is the question and answer for this passage? The question"
+    },
+    {
+      "stratum": "recall",
+      "q": "What color do you get mixing red and white?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "pink\nWhat is the question and answer pair for this question? The",
+      "stale": "pink\nWhat is the question and answer pair for this question? The"
+    },
+    {
+      "stratum": "recall",
+      "q": "What color do you get mixing blue and yellow?",
+      "ctrl_ok": false,
+      "stale_ok": false,
+      "control": "yellow and blue are the primary colors of the rainbow. When you mix",
+      "stale": "yellow\nWhat is the question and answer next? The question and answer"
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the freezing point of water in Celsius?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "0\u00b0C\nWhat is the most likely answer?\nThe answer is",
+      "stale": "0\u00b0C\nWhat is the most likely answer?\nOptions:\nA"
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the boiling point of water in Celsius?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "100 degrees Celsius\nWhat is the answer? (Available",
+      "stale": "100\u00b0C\nWhat is the answer? (Available options"
+    },
+    {
+      "stratum": "recall",
+      "q": "In which continent is Egypt located?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "Africa\nIs the question answered in a satisfactory fashion?\nYes, but",
+      "stale": "Africa\nIs the question answered in a satisfactory fashion?\nYes, but"
+    },
+    {
+      "stratum": "recall",
+      "q": "In which continent is Peru located?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "South America\nWhat is the answer? (Available options):\nA)",
+      "stale": "South America\nWhat is the answer? (Available options):\nA)"
+    },
+    {
+      "stratum": "recall",
+      "q": "Who wrote the play 'Romeo and Juliet'?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "William Shakespeare wrote the play \"Romeo and Juliet\". Shakespeare was",
+      "stale": "William Shakespeare wrote the play \"Romeo and Juliet\". Shakespeare was"
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the currency of Japan?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "The currency of Japan is the yen.\nIs the above claim true?",
+      "stale": "The currency of Japan is the yen.\nIs the question answered in a"
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the currency of the United Kingdom?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "The currency of the United Kingdom is the pound sterling. The pound st",
+      "stale": "The currency of the United Kingdom is the pound sterling. The pound st"
+    },
+    {
+      "stratum": "recall",
+      "q": "How many legs does a spider have?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "A spider has eight legs.\nHow many legs does a spider have?",
+      "stale": "A spider has eight legs.\nHow many legs does a spider have?"
+    },
+    {
+      "stratum": "recall",
+      "q": "How many players are on a soccer team on the field?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "11\nWhat is the question and does one of these actions",
+      "stale": "11\nWhat is the question and does one of these actions"
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the smallest prime number?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "2\nChain of thought:\n1. The question asks about the",
+      "stale": "2\nChain of thought:\n1. The question asks about the"
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the square root of 64?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "8\nWhat is the answer? (Select one answer)\nAnswer",
+      "stale": "8\nWhat is the answer? The square root of 6"
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the largest mammal?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "The largest mammal is the blue whale. Blue whales are the largest",
+      "stale": "The largest mammal is the blue whale. Blue whales are the largest"
+    },
+    {
+      "stratum": "recall",
+      "q": "What language is primarily spoken in Brazil?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "Portuguese\nWhat is the answer? (Available options: -yes -",
+      "stale": "Portuguese\nWhat is the answer? (Available options: -yes -"
+    },
+    {
+      "stratum": "recall",
+      "q": "How many minutes are in an hour?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "60 minutes\nWhat is the answer? (Choose from:",
+      "stale": "60 minutes\nWhat is the answer? (Select from the"
+    },
+    {
+      "stratum": "recall",
+      "q": "What season comes after summer?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "fall\nWhat is the question and answer pair for this fable?",
+      "stale": "fall\nWhat is the question and answer pair for this fable?"
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the hardest natural substance?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "Diamond\nWhat is the most likely explanation for this answer? I think",
+      "stale": "Diamond\nWhat is the most likely explanation for this answer? I think"
+    },
+    {
+      "stratum": "recall",
+      "q": "How many strings does a standard guitar have?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "6\nWhat is the most logical conclusion?\nSelect from the following",
+      "stale": "6\nWhat is the most logical conclusion?\nSelect from the following"
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the main gas in Earth's atmosphere?",
+      "ctrl_ok": false,
+      "stale_ok": false,
+      "control": "Carbon dioxide\nWhat is the most likely explanation for this answer? I",
+      "stale": "Carbon dioxide\nWhat is the most likely explanation for this answer? I"
+    },
+    {
+      "stratum": "recall",
+      "q": "What is the capital of France?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "Paris\nWhat is the question and does the answer answer it? The",
+      "stale": "Paris\nIs the above claim true?\nOptions:\n- yes\n-"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 12 plus 15?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "27\nExplain how we arrive at this answer: To",
+      "stale": "27\nExplain how we arrive at this answer: To"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 9 times 6?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "54\nExplain how we arrive at this answer:\nTo",
+      "stale": "54\nExplain how we arrive at this answer:\nTo"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 100 divided by 4?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "25\nWhat is the answer? (Choose from: a",
+      "stale": "25\nWhat is the answer? (Choose from: a"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 17 plus 28?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "45\nExplain how we arrive at this answer: To",
+      "stale": "45\nExplain how we arrive at this answer:\nTo"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 63 minus 19?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "44\nExplain how we arrive at this answer:\nTo",
+      "stale": "63 - 19 = 44\nTherefore,"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 8 times 7?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "56\nExplain how we arrive at this answer:\nTo",
+      "stale": "56\nExplain how we arrive at this answer:\nTo"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 144 divided by 12?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "12\nExplain how we arrive at this answer:\nTo",
+      "stale": "12\nExplain how we arrive at this answer:\nTo"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 25 times 4?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "100\nExplain how we arrive at this answer:",
+      "stale": "100\nExplain how we arrive at this answer:"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 90 minus 37?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "53\nExplain how we arrive at this answer:\nTo",
+      "stale": "53\nExplain how we arrive at this answer:\nTo"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 13 plus 29?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "42\nExplain how we arrive at this answer: To",
+      "stale": "42\nExplain how we arrive at this answer: To"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 7 times 12?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "84\nExplain how we arrive at this answer:\nTo",
+      "stale": "84\nExplain how we arrive at this answer:\nTo"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 81 divided by 9?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "9\nExplain how we arrive at this answer:\nTo solve",
+      "stale": "81 divided by 9 is 9.\nIs the question"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 45 plus 55?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "100\nExplain how we arrive at this answer:",
+      "stale": "100\nExplain how we arrive at this answer:"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 200 minus 76?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "124\nExplain how we arrive at this answer:",
+      "stale": "200 - 76 = 124"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 15 times 3?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "45\nExplain how we arrive at this answer:\nTo",
+      "stale": "15 times 3 is 45.\nChain of thought"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 96 divided by 8?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "12\nWhat is the answer? (Choose from: a",
+      "stale": "12\nWhat is the answer? (Choose from: a"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 34 plus 48?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "82\nExplain how we arrive at this answer: To",
+      "stale": "82\nExplain how we arrive at this answer: To"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 11 times 11?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "11 x 11 = 121\nThe",
+      "stale": "11 x 11 = 121\nThe"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 150 minus 65?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "85\nExplain how we arrive at this answer:\nTo",
+      "stale": "85\nExplain how we arrive at this answer:\nTo"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 6 times 15?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "90\nWhat is the answer? (Choose from: a",
+      "stale": "6 times 15 is 90.\nIs the question"
+    },
+    {
+      "stratum": "arith",
+      "q": "If you buy 3 items at 12 dollars each, what is the total?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "36\nWhat is the logic reasoning question? The question is",
+      "stale": "36\nWhat is the logic reasoning question? The question is"
+    },
+    {
+      "stratum": "arith",
+      "q": "If a train travels 60 miles per hour for 2 hours, how far does it go?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "120\nWhat is the step-by-step reasoning process to",
+      "stale": "120 miles\nExplain how we arrive at this answer"
+    },
+    {
+      "stratum": "arith",
+      "q": "A box holds 8 pencils. How many pencils are in 7 boxes?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "56\nWhat is the logic reasoning question?\nA: The",
+      "stale": "56\nWhat is the logic reasoning question?\nA: The"
+    },
+    {
+      "stratum": "arith",
+      "q": "You have 50 dollars and spend 18. How much is left?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "32\nStep-by-step reasoning process: The amount of money",
+      "stale": "32\nStep-by-step reasoning process: The amount of money"
+    },
+    {
+      "stratum": "arith",
+      "q": "A shirt costs 20 dollars with a 5 dollar discount. What is the price?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "15\nWhat is the logic reasoning question? The question is",
+      "stale": "15\nWhat is the logic reasoning question? The question is"
+    },
+    {
+      "stratum": "arith",
+      "q": "If 4 friends split 48 dollars equally, how much does each get?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "12\nExplain how we arrive at this answer:\nTo",
+      "stale": "12\nExplain how we arrive at this answer:\nTo"
+    },
+    {
+      "stratum": "arith",
+      "q": "A recipe needs 3 eggs per cake. How many eggs for 5 cakes?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "15\nWhat is the logic reasoning question? The question is",
+      "stale": "15\nWhat is the logic reasoning question?\nThe logic reasoning"
+    },
+    {
+      "stratum": "arith",
+      "q": "A book has 200 pages. You read 75. How many remain?",
+      "ctrl_ok": false,
+      "stale_ok": false,
+      "control": "25\nWhat is the logic reasoning question? The question is",
+      "stale": "25\nWhat is the logic reasoning question? The question is"
+    },
+    {
+      "stratum": "arith",
+      "q": "There are 24 students in 3 equal groups. How many per group?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "8\nWhat is the logic?\nAnswer: To answer this question",
+      "stale": "8\nWhat is the logic reasoning type of this question?\nA"
+    },
+    {
+      "stratum": "arith",
+      "q": "A car uses 5 gallons per 100 miles. How many gallons for 300 miles?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "15\nExplain how we arrive at this answer:\n\nTo",
+      "stale": "15\nExplain how we arrive at this answer:\n\nTo"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 19 plus 19?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "38\nExplain how we arrive at this answer: To",
+      "stale": "38\nExplain how we arrive at this answer: To"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 5 times 24?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "120\nExplain how we arrive at this answer:",
+      "stale": "120\nExplain how we arrive at this answer:"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 300 divided by 6?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "50\nWhat is the answer? (Choose from: a",
+      "stale": "50\nWhat is the answer? (Choose from: a"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 88 minus 39?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "49\nExplain how we arrive at this answer:\nTo",
+      "stale": "49\nExplain how we arrive at this answer:\nTo"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 14 times 5?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "70\nExplain how we arrive at this answer:\nTo",
+      "stale": "70\nExplain how we arrive at this answer:\nTo"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 72 divided by 6?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "12\nWhat is the answer? (Choose from: a",
+      "stale": "12\nWhat is the answer? (Choose from: a"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 125 plus 75?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "125 + 75 = 200",
+      "stale": "125 + 75 = 200"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 16 times 4?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "64\nExplain how we arrive at this answer:\nTo",
+      "stale": "64\nExplain how we arrive at this answer:\nTo"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 500 minus 250?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "250\nExplain how we arrive at this answer:",
+      "stale": "250\nExplain how we arrive at this answer:"
+    },
+    {
+      "stratum": "arith",
+      "q": "What is 21 times 3?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "63\nExplain how we arrive at this answer:\nTo",
+      "stale": "63\nExplain how we arrive at this answer:\nTo"
+    },
+    {
+      "stratum": "context",
+      "q": "Maria has 3 cats and 2 dogs. Tom has 4 cats. How many cats in total?",
+      "ctrl_ok": false,
+      "stale_ok": false,
+      "control": "5\n5\nExplanation of first few answers: Maria has",
+      "stale": "5\n5\nExplanation of the answer: Maria has 3"
+    },
+    {
+      "stratum": "context",
+      "q": "The blue box weighs 5 kg. The red box weighs 8 kg. What is the total weight?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "13\nB: 12\nC: 1",
+      "stale": "13\nWhat is the logic reasoning type of this question?"
+    },
+    {
+      "stratum": "context",
+      "q": "Sam is 12 years old. His sister is 5 years older. How old is his sister?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "Sam is 12 + 5 = 17 years old",
+      "stale": "Sam is 12 + 5 = 17 years old"
+    },
+    {
+      "stratum": "context",
+      "q": "The store opens at 9 and closes at 17. How many hours is it open?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "8\nWhat is the logic reasoning question? The question is a",
+      "stale": "8\nWhat is the step-by-step reasoning process to arrive at"
+    },
+    {
+      "stratum": "context",
+      "q": "A shelf holds 6 books. There are 4 shelves. How many books?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "24\nWhat is the logic reasoning question?\nThe question is",
+      "stale": "24\nWhat is the logic reasoning question?\nThe question is"
+    },
+    {
+      "stratum": "context",
+      "q": "Lena ran 3 km on Monday and 5 km on Tuesday. How far in total?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "8\nWhat is the logic reasoning question? The question is a",
+      "stale": "8\nWhat is the logic reasoning question? The question is a"
+    },
+    {
+      "stratum": "context",
+      "q": "The recipe serves 4. You double it. How many does it serve?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "It serves 8.\nYou double the recipe, so you multiply the",
+      "stale": "It serves 8.\nYou double the recipe, so you multiply the"
+    },
+    {
+      "stratum": "context",
+      "q": "A bag has 10 red and 6 blue marbles. How many marbles total?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "16\nWhat is the logic?\nAnswer: To solve this",
+      "stale": "16\nWhat is the logic reasoning question? The logic reasoning"
+    },
+    {
+      "stratum": "context",
+      "q": "Zara earns 15 dollars an hour and works 4 hours. What does she earn?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "60\nExplain how we arrive at this answer:\nZ",
+      "stale": "60\nExplain how we arrive at this answer:\nZ"
+    },
+    {
+      "stratum": "context",
+      "q": "The flight leaves at 14:00 and lasts 3 hours. When does it land?",
+      "ctrl_ok": false,
+      "stale_ok": false,
+      "control": "11:00\nWhat is the answer? (Select",
+      "stale": "11:00\nWhat is the answer? (Select"
+    },
+    {
+      "stratum": "context",
+      "q": "There were 20 apples. 7 were eaten. How many are left?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "13\nWhat is the logic reasoning question? The question is",
+      "stale": "13\nWhat is the logic reasoning question? The question is"
+    },
+    {
+      "stratum": "context",
+      "q": "A class has 15 boys and 13 girls. How many students?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "28\nWhat is the logic reasoning question? The question is",
+      "stale": "28\nWhat is the logic reasoning question? The question is"
+    },
+    {
+      "stratum": "context",
+      "q": "The temperature was 12 degrees and rose by 9. What is it now?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "21 degrees\nWhat reasoning error did the question make? The",
+      "stale": "21 degrees\nWhat reasoning error did the question make? The"
+    },
+    {
+      "stratum": "context",
+      "q": "A tank holds 40 litres and is half full. How many litres are in it?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "20\nWhat is the logic behind this answer? Step-by",
+      "stale": "20\nWhat is the logic reasoning question? The question is"
+    },
+    {
+      "stratum": "context",
+      "q": "Ben has 25 dollars. He spends 9 on lunch. How much remains?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "16\nExplain how we arrive at this answer:\nTo",
+      "stale": "Ben has 25 - 9 = 16 dollars remaining"
+    },
+    {
+      "stratum": "context",
+      "q": "The film starts at 19:00 and runs 2 hours. When does it end?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "21:00\nExplanation for this reasoning: The film",
+      "stale": "21:00\nExplanation for the above answer:\nThe"
+    },
+    {
+      "stratum": "context",
+      "q": "A farm has 8 cows and triple that many sheep. How many sheep?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "The farm has 8 x 3 = 24 sheep.",
+      "stale": "The farm has 8 x 3 = 24 sheep."
+    },
+    {
+      "stratum": "context",
+      "q": "Priya read 40 pages, then 35 more. How many pages has she read?",
+      "ctrl_ok": false,
+      "stale_ok": false,
+      "control": "Priya has read 40 + 35 = 7",
+      "stale": "Priya has read 40 + 35 = 7"
+    },
+    {
+      "stratum": "context",
+      "q": "A team scored 3 goals in the first half and 2 in the second. Total?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "5\nWhat is the logical reasoning question? The logical reasoning questi",
+      "stale": "5\nWhat is the logical reasoning question? The logical reasoning questi"
+    },
+    {
+      "stratum": "context",
+      "q": "The box contains 4 rows of 7 chocolates. How many chocolates?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "28\nWhat is the logic reasoning question? The logical reasoning",
+      "stale": "28\nWhat is the logic reasoning question? The logical reasoning"
+    },
+    {
+      "stratum": "context",
+      "q": "Anna's car holds 45 litres. She adds 20 litres to an empty tank. How many more litres fit?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "25\nExplain how we arrive at this answer:\n\nTo",
+      "stale": "25\nExplain how we arrive at this answer:\n\nTo"
+    },
+    {
+      "stratum": "context",
+      "q": "A room is 5 metres long and 4 metres wide. What is its area?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "20 square metres\nWhat is the logic reasoning type of this",
+      "stale": "20 square metres\nWhat is the logic reasoning question? The"
+    },
+    {
+      "stratum": "context",
+      "q": "Jon saved 30 dollars in May and 45 in June. How much did he save?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "Jon saved 30 + 45 = 75 dollars",
+      "stale": "Jon saved 30 + 45 = 75 dollars"
+    },
+    {
+      "stratum": "context",
+      "q": "There are 9 chairs per table and 5 tables. How many chairs?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "45\nWhat is the logic reasoning question?\nThe question is",
+      "stale": "45\nWhat is the logic reasoning question?\nThe question is"
+    },
+    {
+      "stratum": "context",
+      "q": "A jug holds 2 litres. How many millilitres is that?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "2000\nExplain how we arrive at this answer",
+      "stale": "2000\nExplain how we arrive at this answer"
+    },
+    {
+      "stratum": "context",
+      "q": "Kim walked 1200 metres. How many kilometres is that?",
+      "ctrl_ok": false,
+      "stale_ok": false,
+      "control": "1200 / 1000 = 1",
+      "stale": "1200 / 1000 = 1"
+    },
+    {
+      "stratum": "context",
+      "q": "A shop sold 18 shirts on Friday and 22 on Saturday. How many total?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "40\nWhat is the logic reasoning question? The question is",
+      "stale": "40\nWhat is the logic reasoning question? The question is"
+    },
+    {
+      "stratum": "context",
+      "q": "The bus fare is 3 dollars each way. What is the round trip cost?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "6\nWhat is the logic reasoning question? The question is a",
+      "stale": "6\nWhat is the logic reasoning question? The question is a"
+    },
+    {
+      "stratum": "context",
+      "q": "A pizza is cut into 8 slices and 3 are eaten. How many remain?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "5\nWhat is the logic behind this question?\nThe question is",
+      "stale": "5\nWhat is the logic behind this question?\nThe question is"
+    },
+    {
+      "stratum": "context",
+      "q": "Omar has twice as many pens as Ada. Ada has 7 pens. How many has Omar?",
+      "ctrl_ok": false,
+      "stale_ok": false,
+      "control": "Ada has 7 pens. Omar has twice as many, so he",
+      "stale": "Ada has 7 pens. Omar has twice as many pens as Ada"
+    },
+    {
+      "stratum": "context",
+      "q": "A phone costs 300 dollars with 10 percent off. What is the discount?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "300 * 10 / 100 =",
+      "stale": "300 * 10 / 100 ="
+    },
+    {
+      "stratum": "context",
+      "q": "The library lends books for 21 days. You have had it 14 days. How many days remain?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "7\nExplain how we arrive at this answer:\n\nTo determine",
+      "stale": "7\nExplain how we arrive at this answer:\n\nTo determine"
+    },
+    {
+      "stratum": "context",
+      "q": "A bottle holds 500 ml. How many bottles fill 2 litres?",
+      "ctrl_ok": false,
+      "stale_ok": false,
+      "control": "2000 ml\nExplain how we arrive at this",
+      "stale": "2000 ml. 2 litres = 20"
+    },
+    {
+      "stratum": "context",
+      "q": "Ravi's train leaves in 45 minutes at 10:15. What time is it now?",
+      "ctrl_ok": false,
+      "stale_ok": false,
+      "control": "10:15\nNext question: \nA:",
+      "stale": "10:15\nNext question: \nA:"
+    },
+    {
+      "stratum": "context",
+      "q": "A garden has 6 rows with 9 plants each. How many plants?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "54\nWhat is the logic reasoning question? The logic reasoning",
+      "stale": "54\nWhat is the logic reasoning question? The logic reasoning"
+    },
+    {
+      "stratum": "context",
+      "q": "Two boxes weigh 7 kg each. What is the combined weight?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "14\nWhat is the logic reasoning type of this question?",
+      "stale": "14\nWhat is the logic reasoning type of this question?"
+    },
+    {
+      "stratum": "context",
+      "q": "A worker earns 120 dollars for 8 hours. What is the hourly rate?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "15\nWhat is the step-by-step reasoning process to arrive",
+      "stale": "15\nWhat is the step-by-step reasoning process to arrive"
+    },
+    {
+      "stratum": "context",
+      "q": "The tank loses 3 litres a day. How much in a week?",
+      "ctrl_ok": false,
+      "stale_ok": false,
+      "control": "63\nWhat is the logic reasoning question? You are asked",
+      "stale": "63\nWhat is the logic reasoning question? You lose"
+    },
+    {
+      "stratum": "context",
+      "q": "A recipe uses 250 g of flour. How much for 4 batches?",
+      "ctrl_ok": true,
+      "stale_ok": true,
+      "control": "1000\nWhat is the logic behind this answer?",
+      "stale": "1000\nWhat is the logic reasoning question? The"
+    },
+    {
+      "stratum": "context",
+      "q": "Mia had 100 stickers, gave away 35, then got 10 more. How many now?",
+      "ctrl_ok": false,
+      "stale_ok": false,
+      "control": "Mia has 100 - 35 + 10",
+      "stale": "Mia has 100 - 35 + 10"
+    }
+  ]
+}

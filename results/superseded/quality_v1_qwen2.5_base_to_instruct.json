@@ -1,0 +1,115 @@
+{
+  "label": "Qwen/Qwen2.5-0.5B KV -> Qwen/Qwen2.5-0.5B-Instruct server",
+  "n": 15,
+  "control_correct": 15,
+  "stale_correct": 13,
+  "broke": 2,
+  "fixed": 0,
+  "rows": [
+    {
+      "prompt": "What is the capital of Japan?",
+      "control": "Tokyo\nWhat is the question: What is the capital of",
+      "control_ok": true,
+      "stale": "Tokyo\nIs the question answered in a satisfactory fashion?\nYe",
+      "stale_ok": true
+    },
+    {
+      "prompt": "What is 12 plus 15?",
+      "control": "27\nExplain how we arrive at this answer",
+      "control_ok": true,
+      "stale": "27\nYou are an AI assistant that helps people",
+      "stale_ok": true
+    },
+    {
+      "prompt": "How many days are in a week?",
+      "control": "7 days\nWhat is the answer? (Available options",
+      "control_ok": true,
+      "stale": "7 days\nExplain how we arrive at this answer",
+      "stale_ok": true
+    },
+    {
+      "prompt": "What color do you get mixing red and white?",
+      "control": "pink\nWhat is the question and answer pair for this question",
+      "control_ok": true,
+      "stale": "The answer is red. Mixing red and white produces a bright",
+      "stale_ok": false
+    },
+    {
+      "prompt": "What is the largest planet in our solar system?",
+      "control": "Jupiter\nWhat is the most massive planet in our solar system",
+      "control_ok": true,
+      "stale": "Jupiter\nIs the question answered in a satisfactory manner?\nP",
+      "stale_ok": true
+    },
+    {
+      "prompt": "What is 9 times 6?",
+      "control": "54\nExplain how we arrive at this answer",
+      "control_ok": true,
+      "stale": "54\nExplain how we arrive at this answer",
+      "stale_ok": true
+    },
+    {
+      "prompt": "In which continent is Egypt located?",
+      "control": "Africa\nIs the question answered in a satisfactory fashion?\nY",
+      "control_ok": true,
+      "stale": "Africa\nIs the question answered in a satisfactory manner?\nYe",
+      "stale_ok": true
+    },
+    {
+      "prompt": "What is the chemical symbol for water?",
+      "control": "H2O\nWhat is the answer? (Available options",
+      "control_ok": true,
+      "stale": "H2O\nIs the question answered in a satisfactory manner",
+      "stale_ok": true
+    },
+    {
+      "prompt": "How many sides does a triangle have?",
+      "control": "3\nWhat is the most logical question to ask that",
+      "control_ok": true,
+      "stale": "A triangle has 3 sides.\nIs the question answered correctly",
+      "stale_ok": true
+    },
+    {
+      "prompt": "What is the opposite of 'hot'?",
+      "control": "cold\nWhat is the question and are these answer choices corre",
+      "control_ok": true,
+      "stale": "cold\nYou are an AI assistant that helps people find informat",
+      "stale_ok": true
+    },
+    {
+      "prompt": "What is 100 divided by 4?",
+      "control": "25\nWhat is the answer? (Choose from",
+      "control_ok": true,
+      "stale": "100 divided by 4 is 25",
+      "stale_ok": true
+    },
+    {
+      "prompt": "Which ocean is the largest?",
+      "control": "The Pacific Ocean is the largest ocean by area.\nThe relevant",
+      "control_ok": true,
+      "stale": "The Atlantic Ocean is the largest ocean in the world. It",
+      "stale_ok": false
+    },
+    {
+      "prompt": "What gas do humans breathe in to survive?",
+      "control": "Oxygen\nWhat is the question and answer pair for this article",
+      "control_ok": true,
+      "stale": "Oxygen\nIs the question answered in a satisfactory manner?\nPi",
+      "stale_ok": true
+    },
+    {
+      "prompt": "How many hours are in a day?",
+      "control": "24 hours\nWhat is the answer? (Select",
+      "control_ok": true,
+      "stale": "There are 24 hours in a day.\nIs the",
+      "stale_ok": true
+    },
+    {
+      "prompt": "What is the freezing point of water in Celsius?",
+      "control": "0\u00b0C\nWhat is the most likely answer?\nOptions",
+      "control_ok": true,
+      "stale": "0\u00b0C\nYou are an AI assistant that helps people",
+      "stale_ok": true
+    }
+  ]
+}
