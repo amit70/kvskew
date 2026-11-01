@@ -160,6 +160,9 @@ def main():
         dtype_a, dtype_b = torch.float32, torch.bfloat16
         label = f"{args.model}  fp32 KV -> bf16 server"
     else:
+        if not (args.model_a and args.model_b):
+            ap.error("--mode checkpoint needs --model-a (wrote the KV) "
+                     "and --model-b (the server)")
         name_a, name_b = args.model_a, args.model_b
         dtype_a = dtype_b = torch.float32
         label = f"{name_a} KV -> {name_b} server"
