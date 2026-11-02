@@ -68,8 +68,8 @@ worth recording.
 
 ## Results
 
-Numbers match the paper. Every one is backed by a file in `results/` except
-two rows of the severity table, noted in `results/README.md`.
+Numbers match the paper, and every one is backed by a raw result file in
+`results/` (see `results/README.md`).
 
 ### How often: rollout exposure (simulation)
 
