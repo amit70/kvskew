@@ -1,0 +1,6 @@
+ Priya Sharma
+Explanation of how she arrived at this answer:
+
+Priya Sharma is the manager of the entire network, which consists of 60 warehouses. She was appointed as the manager by the CEO of the company. Therefore, the
+
+usage: {"prompt_tokens": 1212, "total_tokens": 1260, "completion_tokens": 48, "prompt_tokens_details": null, "completion_tokens_details": null}

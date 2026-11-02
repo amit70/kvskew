@@ -1,0 +1,3 @@
+[2026-11-02 20:27:51,516] LMCache INFO: Stored 1024 tokens in 0.005 seconds (lmcache_driven_transfer.py:834:lmcache.v1.multiprocess.modules.lmcache_driven_transfer)
+[2026-11-02 20:27:54,670] LMCache INFO: Prefetch request completed (L1+L2): 4/4 retained keys (4 L1, 0 L2) in 2.0 ms (external_request_id=cmpl-93c70b12f040050c-0-86e8455a, prefetch_request_id=1) (storage_manager.py:651:lmcache.v1.distributed.storage_manager)
+[2026-11-02 20:27:54,682] LMCache INFO: Retrieved 1024 tokens in 0.004 seconds (lmcache_driven_transfer.py:1100:lmcache.v1.multiprocess.modules.lmcache_driven_transfer)

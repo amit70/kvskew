@@ -1,0 +1,2 @@
+[2026-11-02 20:34:27,936] LMCache INFO: Stored 1024 tokens in 0.004 seconds (lmcache_driven_transfer.py:834:lmcache.v1.multiprocess.modules.lmcache_driven_transfer)
+[2026-11-02 20:34:31,403] LMCache INFO: Stored 1024 tokens in 0.005 seconds (lmcache_driven_transfer.py:834:lmcache.v1.multiprocess.modules.lmcache_driven_transfer)

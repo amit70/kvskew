@@ -1,0 +1,9 @@
+Mon Nov  2 20:32:12 UTC 2026
+NVIDIA GeForce RTX 4090, 49140 MiB
+[32;20m[2026-11-02 20:32:16,909] LMCache INFO:[0m torch_dev=<module 'torch.cuda' from '/venv/main/lib/python3.12/site-packages/torch/cuda/__init__.py'>, torch_device_type=cuda [3m(_device_detect.py:311:lmcache.v1.platform._device_detect)[0m
+[32;20m[2026-11-02 20:32:16,910] LMCache INFO:[0m Auto-selected backend [cuda] for accelerator 'cuda' from candidate backends [cuda, rocm]. [3m(__init__.py:154:lmcache.v1.platform)[0m
+vllm 0.32.0
+lmcache 0.5.6
+[32;20m[2026-11-02 20:32:19,997] LMCache INFO:[0m torch_dev=<module 'torch.cuda' from '/venv/main/lib/python3.12/site-packages/torch/cuda/__init__.py'>, torch_device_type=cuda [3m(_device_detect.py:311:lmcache.v1.platform._device_detect)[0m
+[32;20m[2026-11-02 20:32:19,997] LMCache INFO:[0m Auto-selected backend [cuda] for accelerator 'cuda' from candidate backends [cuda, rocm]. [3m(__init__.py:154:lmcache.v1.platform)[0m
+external MP connector: /venv/main/lib/python3.12/site-packages/lmcache/integration/vllm/lmcache_mp_connector.py
