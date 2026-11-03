@@ -10,7 +10,29 @@ weights. This repository shows that a widely used shared-cache key cannot tell
 two checkpoints of the same model apart, measures how often that happens during
 a rolling upgrade, and measures what it does to answers.
 
-## The gap, in one command
+## The gap
+
+LMCache's multiprocess (MP) connector for vLLM, the path the project actively
+maintains, stores KV under a cache model name built from vLLM's
+`model_config.model` (plus the decode-context-parallel layout when it is
+non-trivial). vLLM's `--revision` is not part of it, and chunk hashes cover
+token ids only, which do not depend on the weights. So two servers started from
+one model ID with different `--revision` values share cache entries.
+
+### Reproduced end to end
+
+It reproduces through a real vLLM + LMCache deployment: two
+servers started from one model ID with different `--revision` values, sharing
+one LMCache server. With LMCache 0.5.6 as released, the second revision loads
+1,024 tokens of KV written by the first and answers in gibberish; with the
+proposed fix it answers like the control. Logs and scripts are in
+[`gpu_repro/`](gpu_repro/README.md).
+
+### The in-process connector (deprecated)
+
+LMCache's older in-process path has the same property, shown here without a GPU.
+LMCache maintainers have said this path is deprecated and no longer actively
+maintained, so the MP result above is the one that matters.
 
 ```bash
 cd src
@@ -51,15 +73,6 @@ for.
 `python lmcache_key_repro.py --use-lmcache` runs the same comparison on real
 `CacheEngineKey` objects from an installed LMCache instead of this repository's
 copy of the format.
-
-### Reproduced end to end
-
-The same failure reproduces through a real vLLM + LMCache deployment: two
-servers started from one model ID with different `--revision` values, sharing
-one LMCache server. With LMCache 0.5.6 as released, the second revision loads
-1,024 tokens of KV written by the first and answers in gibberish; with the
-proposed fix it answers like the control. Logs and scripts are in
-[`gpu_repro/`](gpu_repro/README.md).
 
 ### Scope
 
