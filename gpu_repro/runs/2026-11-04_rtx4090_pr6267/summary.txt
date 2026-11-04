@@ -1,0 +1,21 @@
+== cache names
+unpinned, stock : amitrajula/kvskew-demo
+unpinned, #6267 : amitrajula/kvskew-demo
+pinned A, #6267 : amitrajula/kvskew-demo##lmcache-revision-v1-9f5fb381869af92331669c76bc0fab55d6ce2d63
+pinned B, #6267 : amitrajula/kvskew-demo##lmcache-revision-v1-6f54247043512e1226da692eec6bde78ab1f3f8a
+== what vLLM passes as model_config.revision
+unpinned : KVSKEW_REVISION=ResolvedRevision(initial=None, resolved='6f54247043512e1226da692eec6bde78ab1f3f8a') initial=None resolved='6f54247043512e1226da692eec6bde78ab1f3f8a' (lmcache_mp_connector.py:670:lmcache.integration.vllm.lmcache_mp_connector)
+pinned A : KVSKEW_REVISION=ResolvedRevision(initial='9f5fb381869af92331669c76bc0fab55d6ce2d63', resolved='9f5fb381869af92331669c76bc0fab55d6ce2d63') initial='9f5fb381869af92331669c76bc0fab55d6ce2d63' resolved='9f5fb381869af92331669c76bc0fab55d6ce2d63' (lmcache_mp_connector.py:670:lmcache.integration.vllm.lmcache_mp_connector)
+== LMCache store/retrieve during run 3 (expected: two stores, no retrieval)
+[2026-11-04 04:04:05,460] LMCache INFO: Stored 1024 tokens in 0.010 seconds (lmcache_driven_transfer.py:834:lmcache.v1.multiprocess.modules.lmcache_driven_transfer)
+[2026-11-04 04:04:08,972] LMCache INFO: Stored 1024 tokens in 0.006 seconds (lmcache_driven_transfer.py:834:lmcache.v1.multiprocess.modules.lmcache_driven_transfer)
+== revision B answer after A (expected: Priya Sharma)
+ Priya Sharma
+Explanation of how she arrived at this answer:
+
+Priya Sharma is the manager of the entire network, which consists of 60 warehouses. She was appointed as the manager by the CEO of the company. Therefore, the
+== checks
+PASS unpinned name unchanged
+PASS pinned revisions get distinct names
+PASS no cross-revision retrieval
+PASS B answers correctly

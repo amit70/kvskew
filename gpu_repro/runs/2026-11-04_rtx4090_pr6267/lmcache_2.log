@@ -1,0 +1,86 @@
+[32;20m[2026-11-04 03:58:26,202] LMCache INFO:[0m torch_dev=<module 'torch.cuda' from '/venv/main/lib/python3.12/site-packages/torch/cuda/__init__.py'>, torch_device_type=cuda [3m(_device_detect.py:311:lmcache.v1.platform._device_detect)[0m
+[32;20m[2026-11-04 03:58:26,203] LMCache INFO:[0m Auto-selected backend [cuda] for accelerator 'cuda' from candidate backends [cuda, rocm]. [3m(__init__.py:154:lmcache.v1.platform)[0m
+
+ _     __  __    ____           _          
+| |   |  \/  |  / ___|__ _  ___| |__   ___      LMCache v0.5.6 (g3e11e108)
+| |   | |\/| | | |   / _` |/ __| '_ \ / _ \     Website:  https://lmcache.ai/
+| |___| |  | | | |__| (_| | (__| | | |  __/     Recipes:  https://docs.lmcache.ai/recipes
+|_____|_|  |_|  \____\__,_|\___|_| |_|\___|     LinkedIn: https://www.linkedin.com/company/lmcache-lab
+Set LMCACHE_DISABLE_BANNER=1 to hide this banner.
+
+/venv/main/lib/python3.12/site-packages/google/auth/transport/grpc.py:43: FutureWarning: grpcio < 1.83.0 does not support Post-Quantum Cryptography (PQC). Support for non-PQC environments is deprecated. In April 2027, google-auth will raise its minimum requirements to enforce grpcio >= 1.83.0. For more details on Google Cloud's post-quantum security migration, visit: https://cloud.google.com/security/resources/post-quantum-cryptography
+  warnings.warn(
+[32;20m[2026-11-04 03:58:30,343] LMCache INFO:[0m Discovered API module: cache_api [3m(router_discovery.py:53:lmcache.v1.utils.router_discovery)[0m
+[32;20m[2026-11-04 03:58:30,344] LMCache INFO:[0m Discovered API module: env_api [3m(router_discovery.py:53:lmcache.v1.utils.router_discovery)[0m
+[32;20m[2026-11-04 03:58:30,347] LMCache INFO:[0m Discovered API module: loglevel_api [3m(router_discovery.py:53:lmcache.v1.utils.router_discovery)[0m
+[32;20m[2026-11-04 03:58:30,347] LMCache INFO:[0m Discovered API module: metrics_api [3m(router_discovery.py:53:lmcache.v1.utils.router_discovery)[0m
+[32;20m[2026-11-04 03:58:30,350] LMCache INFO:[0m Discovered API module: periodic_thread_api [3m(router_discovery.py:53:lmcache.v1.utils.router_discovery)[0m
+[32;20m[2026-11-04 03:58:30,350] LMCache INFO:[0m Discovered API module: run_script_api [3m(router_discovery.py:53:lmcache.v1.utils.router_discovery)[0m
+[32;20m[2026-11-04 03:58:30,352] LMCache INFO:[0m Discovered API module: thread_api [3m(router_discovery.py:53:lmcache.v1.utils.router_discovery)[0m
+[32;20m[2026-11-04 03:58:30,355] LMCache INFO:[0m Discovered API module: common_api [3m(router_discovery.py:53:lmcache.v1.utils.router_discovery)[0m
+[32;20m[2026-11-04 03:58:30,356] LMCache INFO:[0m Discovered API module: config_api [3m(router_discovery.py:53:lmcache.v1.utils.router_discovery)[0m
+[32;20m[2026-11-04 03:58:30,359] LMCache INFO:[0m Discovered API module: info_api [3m(router_discovery.py:53:lmcache.v1.utils.router_discovery)[0m
+[32;20m[2026-11-04 03:58:30,362] LMCache INFO:[0m Discovered API module: l1_reconfigure_api [3m(router_discovery.py:53:lmcache.v1.utils.router_discovery)[0m
+[32;20m[2026-11-04 03:58:30,365] LMCache INFO:[0m Discovered API module: quota_api [3m(router_discovery.py:53:lmcache.v1.utils.router_discovery)[0m
+[32;20m[2026-11-04 03:58:30,369] LMCache INFO:[0m Discovered API module: reconfigure_api [3m(router_discovery.py:53:lmcache.v1.utils.router_discovery)[0m
+[32;20m[2026-11-04 03:58:30,400] LMCache INFO:[0m CudaPinMemoryBackend: using torch cudart [3m(pin_memory.py:91:lmcache.v1.platform.devices.cuda.pin_memory)[0m
+[32;20m[2026-11-04 03:58:30,401] LMCache INFO:[0m Starting LMCache HTTP server on http://127.0.0.1:8089 [3m(http_server.py:255:lmcache.v1.multiprocess.http_server)[0m
+INFO:     Started server process [6134]
+INFO:     Waiting for application startup.
+[32;20m[2026-11-04 03:58:30,420] LMCache INFO:[0m Starting LMCache HTTP server... (accelerator available: True) [3m(http_server.py:77:lmcache.v1.multiprocess.http_server)[0m
+[32;20m[2026-11-04 03:58:30,422] LMCache INFO:[0m OTel MeterProvider initialised with Prometheus fallback (standalone metrics HTTP server disabled; /metrics must be exposed by the caller), resource={'telemetry.sdk.language': 'python', 'telemetry.sdk.name': 'opentelemetry', 'telemetry.sdk.version': '1.40.0', 'service.instance.id': 'dcf2e962-df4e-4479-a08c-be02de56f2ae', 'service.name': 'unknown_service'} [3m(otel_init.py:125:lmcache.v1.mp_observability.otel_init)[0m
+[32;20m[2026-11-04 03:58:31,596] LMCache INFO:[0m Starting L1EvictionController... [3m(eviction_controller.py:53:lmcache.v1.distributed.storage_controllers.eviction_controller)[0m
+[32;20m[2026-11-04 03:58:31,596] LMCache INFO:[0m Starting L2EvictionController... [3m(eviction_controller.py:250:lmcache.v1.distributed.storage_controllers.eviction_controller)[0m
+[32;20m[2026-11-04 03:58:31,597] LMCache INFO:[0m Starting StoreController... [3m(store_controller.py:309:lmcache.v1.distributed.storage_controllers.store_controller)[0m
+[32;20m[2026-11-04 03:58:31,597] LMCache INFO:[0m Starting PrefetchController... [3m(prefetch_controller.py:739:lmcache.v1.distributed.storage_controllers.prefetch_controller)[0m
+[32;20m[2026-11-04 03:58:31,598] LMCache INFO:[0m Using blake3 hash function [3m(token_hasher.py:79:lmcache.v1.multiprocess.token_hasher)[0m
+[32;20m[2026-11-04 03:58:31,598] LMCache INFO:[0m Computed NONE_HASH=b"~>\xff\x9e\xf7a:P4\x0e\xb1&w\xee\x03\xb8:\xc7Y\xfc\xba\x9b\xb3'\x05\xf0rH\xd5mG;" using hash function [3m(token_hasher.py:180:lmcache.v1.multiprocess.token_hasher)[0m
+[32;20m[2026-11-04 03:58:31,599] LMCache INFO:[0m TokenHasher initialized: chunk_size=256, hash_algorithm=blake3 [3m(token_hasher.py:67:lmcache.v1.multiprocess.token_hasher)[0m
+[32;20m[2026-11-04 03:58:31,599] LMCache INFO:[0m PeriodicThread SessionManager-cleanup-thread-7f9c74e67e00 entering main loop (interval=60.0s) [3m(periodic_thread.py:304:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:58:31,599] LMCache INFO:[0m Started PeriodicThread: SessionManager-cleanup-thread-7f9c74e67e00 (level=medium, interval=60.0s, init_wait=0.0s) [3m(periodic_thread.py:248:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:58:31,600] LMCache INFO:[0m PeriodicThread DeviceHostFuncDispatcher entering main loop (interval=0.0s) [3m(periodic_thread.py:304:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:58:31,600] LMCache INFO:[0m Started PeriodicThread: DeviceHostFuncDispatcher (level=high, interval=0.0s, init_wait=0.0s) [3m(periodic_thread.py:248:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:58:31,601] LMCache INFO:[0m Supported transfer mode: lmcache_driven [3m(server.py:244:lmcache.v1.multiprocess.server)[0m
+[32;20m[2026-11-04 03:58:31,601] LMCache INFO:[0m PeriodicThread lmcache-mp-worker-reaper entering main loop (interval=30.0s) [3m(periodic_thread.py:304:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:58:31,601] LMCache INFO:[0m Started PeriodicThread: lmcache-mp-worker-reaper (level=medium, interval=30.0s, init_wait=0.0s) [3m(periodic_thread.py:248:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:58:31,602] LMCache INFO:[0m Initializing MP usage context. [3m(mp.py:93:lmcache.usage_telemetry.mp)[0m
+[32;20m[2026-11-04 03:58:31,602] LMCache INFO:[0m Initializing MP continuous usage reporting. [3m(mp_continuous.py:217:lmcache.usage_telemetry.mp_continuous)[0m
+[32;20m[2026-11-04 03:58:31,603] LMCache INFO:[0m Started PeriodicThread: lmcache-usage-continuous (level=low, interval=600.0s, init_wait=600.0s) [3m(periodic_thread.py:248:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:58:31,603] LMCache INFO:[0m Initializing L2 connector usage reporting. [3m(l2_usage.py:243:lmcache.usage_telemetry.l2_usage)[0m
+[32;20m[2026-11-04 03:58:31,603] LMCache INFO:[0m Started PeriodicThread: lmcache-usage-l2 (level=low, interval=600.0s, init_wait=600.0s) [3m(periodic_thread.py:248:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:58:31,603] LMCache INFO:[0m Initializing L1 usage reporting. [3m(l1_usage.py:154:lmcache.usage_telemetry.l1_usage)[0m
+[32;20m[2026-11-04 03:58:31,604] LMCache INFO:[0m Started PeriodicThread: lmcache-usage-l1 (level=low, interval=600.0s, init_wait=600.0s) [3m(periodic_thread.py:248:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:58:31,614] LMCache INFO:[0m Created AffinityThreadPool 'affinity-pool-0' with 1 worker slots: up to 1 distinct affinity keys each bind to their own thread before slots are shared. Compare this against the number of clients expected to connect to confirm routing. [3m(affinity_pool.py:60:lmcache.v1.multiprocess.affinity_pool)[0m
+[32;20m[2026-11-04 03:58:31,614] LMCache INFO:[0m LMCache zmq cache server is running on 127.0.0.1:6000 [3m(server.py:495:lmcache.v1.multiprocess.server)[0m
+[32;20m[2026-11-04 03:58:31,614] LMCache INFO:[0m LMCache cache server is running... [3m(server.py:511:lmcache.v1.multiprocess.server)[0m
+[32;20m[2026-11-04 03:58:31,614] LMCache INFO:[0m LMCache HTTP server initialized [3m(http_server.py:155:lmcache.v1.multiprocess.http_server)[0m
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8089 (Press CTRL+C to quit)
+[32;20m[2026-11-04 03:59:12,836] LMCache INFO:[0m Engine KV Format: EngineKVFormat.NL_X_NB_BS_NH_CS NL x [NB, BS, NH, CS] [3m(detection.py:69:lmcache.v1.gpu_connector.kv_format.detection)[0m
+[32;20m[2026-11-04 03:59:12,838] LMCache INFO:[0m Engine KV Format: EngineKVFormat.NL_X_NB_BS_NH_CS NL x [NB, BS, NH, CS] [3m(detection.py:69:lmcache.v1.gpu_connector.kv_format.detection)[0m
+[32;20m[2026-11-04 03:59:12,839] LMCache INFO:[0m Group 0 first-layer tensor: layer_idx=0 shape=(81732, 16, 2, 128) stride=(4096, 256, 128, 1) is_contiguous=True dtype=torch.bfloat16 device=cuda:0 storage_offset=0 numel=334774272 storage_nbytes=16069165056 padding_per_block=0 [3m(utils.py:651:lmcache.v1.gpu_connector.utils)[0m
+[32;20m[2026-11-04 03:59:12,839] LMCache INFO:[0m KV layer groups: ---
+KernelGroupInfo(layers=24, indices=0-23, shape_desc=(kv=1, nl=24, nb=81732, bs=16, nh=2, hs=128, element_size=2, block_stride_elems=4096), dtype=torch.bfloat16, tokens_per_block=16, slots_per_block=16, engine_group_idx=0, sw_size_tokens=-1)
+--- [3m(kv_layer_groups.py:476:lmcache.v1.kv_layer_groups)[0m
+[32;20m[2026-11-04 03:59:12,920] LMCache INFO:[0m Registered KV cache for GPU ID 358633213519040052 with 24 layers [3m(lmcache_driven_transfer.py:526:lmcache.v1.multiprocess.modules.lmcache_driven_transfer)[0m
+[32;20m[2026-11-04 03:59:12,921] LMCache INFO:[0m Initialized cuda stream on device cuda:0 [3m(cache_context.py:468:lmcache.v1.platform.devices.cuda.cache_context)[0m
+[32;20m[2026-11-04 03:59:29,362] LMCache INFO:[0m Unregistered KV cache for GPU ID 358633213519040052 [3m(lmcache_driven_transfer.py:554:lmcache.v1.multiprocess.modules.lmcache_driven_transfer)[0m
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+[32;20m[2026-11-04 03:59:34,514] LMCache INFO:[0m Shutting down LMCache HTTP server... [3m(http_server.py:160:lmcache.v1.multiprocess.http_server)[0m
+[32;20m[2026-11-04 03:59:34,515] LMCache INFO:[0m Stopping PeriodicThread: lmcache-usage-l1 [3m(periodic_thread.py:267:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:59:34,515] LMCache INFO:[0m PeriodicThread lmcache-usage-l1 stopped during init_wait [3m(periodic_thread.py:298:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:59:35,308] LMCache INFO:[0m Stopping PeriodicThread: lmcache-usage-l2 [3m(periodic_thread.py:267:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:59:35,309] LMCache INFO:[0m PeriodicThread lmcache-usage-l2 stopped during init_wait [3m(periodic_thread.py:298:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:59:35,309] LMCache INFO:[0m Stopping PeriodicThread: lmcache-usage-continuous [3m(periodic_thread.py:267:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:59:35,309] LMCache INFO:[0m PeriodicThread lmcache-usage-continuous stopped during init_wait [3m(periodic_thread.py:298:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:59:36,372] LMCache INFO:[0m Stopping PeriodicThread: lmcache-mp-worker-reaper [3m(periodic_thread.py:267:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:59:36,372] LMCache INFO:[0m PeriodicThread lmcache-mp-worker-reaper loop stopped [3m(periodic_thread.py:372:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:59:36,373] LMCache INFO:[0m Stopping PeriodicThread: DeviceHostFuncDispatcher [3m(periodic_thread.py:267:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:59:36,373] LMCache INFO:[0m PeriodicThread DeviceHostFuncDispatcher loop stopped [3m(periodic_thread.py:372:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:59:36,374] LMCache INFO:[0m Stopping PeriodicThread: SessionManager-cleanup-thread-7f9c74e67e00 [3m(periodic_thread.py:267:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:59:36,374] LMCache INFO:[0m PeriodicThread SessionManager-cleanup-thread-7f9c74e67e00 loop stopped [3m(periodic_thread.py:372:lmcache.v1.periodic_thread)[0m
+[32;20m[2026-11-04 03:59:37,774] LMCache INFO:[0m MPCacheServer closed [3m(server.py:151:lmcache.v1.multiprocess.server)[0m
+[32;20m[2026-11-04 03:59:37,775] LMCache INFO:[0m LMCache HTTP server stopped [3m(http_server.py:177:lmcache.v1.multiprocess.http_server)[0m
+INFO:     Application shutdown complete.
+INFO:     Finished server process [6134]

@@ -39,12 +39,32 @@ amitrajula/kvskew-demo##lmcache-revision-v1-6f54247043512e1226da692eec6bde78ab1f
 Nothing errors in the released case. Revision B silently answers from
 revision A's KV.
 
+## Verification of LMCache PR #6267
+
+[LMCache#6267](https://github.com/LMCache/LMCache/pull/6267) fixes
+[LMCache#6253](https://github.com/LMCache/LMCache/issues/6253). Its revision
+logic (head `df10c9bf`, copied verbatim) was applied to the installed LMCache
+0.5.6 connector and run on 2026-11-04 (RTX 4090, vLLM 0.32.0) with
+`verify_pr6267.sh`:
+
+| Check | Result |
+|---|---|
+| Unpinned engine: cache name unchanged vs. stock LMCache | PASS: `amitrajula/kvskew-demo` in both |
+| Pinned revisions get distinct cache names | PASS: `…##lmcache-revision-v1-9f5fb38…` vs `…-6f54247…` |
+| No cross-revision retrieval (A then B) | PASS: two stores of 1,024 tokens, no retrieval |
+| Revision B answers like the control | PASS: "Priya Sharma …" |
+
+vLLM 0.32 passes `ResolvedRevision(initial=None, resolved='6f54247…')` for an
+unpinned engine, so gating on `initial` (as #6267 does) is what keeps unpinned
+engines on their existing namespace. Logs: `runs/2026-11-04_rtx4090_pr6267/`.
+
 ## Files
 
 - `gpu_repro.sh`: the three runs (control, A then B). Writes `repro_out/`.
 - `gpu_fix_check.sh`: patches the installed connector with the proposed fix
   (three lines appending the revision to the cache model name), repeats A then
   B, restores the original file. Writes `fix_out/`.
+- `verify_pr6267.sh`: applies PR #6267's revision logic to the installed connector and runs the unpinned and pinned checks above.
 - `runs/2026-11-02_rtx4090/bug/` and `.../fixed/`: answers, server logs, and
   `hits_B_after_A.txt` with the LMCache store and retrieve lines.
 
